@@ -12,7 +12,7 @@
 		4681A3C01FBB846C00C0B3BD /* TeamupCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3BF1FBB846C00C0B3BD /* TeamupCalTests.swift */; };
 		4681A3C21FBB846C00C0B3BD /* TeamupCal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4681A3B41FBB846C00C0B3BD /* TeamupCal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4681A3EF1FBB984100C0B3BD /* TeamupCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3EE1FBB984100C0B3BD /* TeamupCal.swift */; };
-		4681A3F41FBB9B2800C0B3BD /* SessionLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3F31FBB9B2800C0B3BD /* SessionLoader.swift */; };
+		4681A3F41FBB9B2800C0B3BD /* SessionsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3F31FBB9B2800C0B3BD /* SessionsLoader.swift */; };
 		955D438D09892AC8764A8C00 /* Pods_TeamupCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6B87FF363AE0A5EE7CAE86 /* Pods_TeamupCal.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +36,7 @@
 		4681A3BF1FBB846C00C0B3BD /* TeamupCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamupCalTests.swift; sourceTree = "<group>"; };
 		4681A3C11FBB846C00C0B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4681A3EE1FBB984100C0B3BD /* TeamupCal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamupCal.swift; sourceTree = "<group>"; };
-		4681A3F31FBB9B2800C0B3BD /* SessionLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionLoader.swift; sourceTree = "<group>"; };
+		4681A3F31FBB9B2800C0B3BD /* SessionsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsLoader.swift; sourceTree = "<group>"; };
 		64E79C565EF9445F3CB584C6 /* Pods-TeamupCal-TeamupCalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-TeamupCalTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8530940F91EB5328586386B3 /* Pods-TeamupCal-TeamupCalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-TeamupCalTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B04FEF19B63B0FE3C178CF2 /* Pods_TeamupCal_TeamupCalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamupCal_TeamupCalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +116,7 @@
 		4681A3F51FBB9B2B00C0B3BD /* Sessions */ = {
 			isa = PBXGroup;
 			children = (
-				4681A3F31FBB9B2800C0B3BD /* SessionLoader.swift */,
+				4681A3F31FBB9B2800C0B3BD /* SessionsLoader.swift */,
 			);
 			path = Sessions;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4681A3EF1FBB984100C0B3BD /* TeamupCal.swift in Sources */,
-				4681A3F41FBB9B2800C0B3BD /* SessionLoader.swift in Sources */,
+				4681A3F41FBB9B2800C0B3BD /* SessionsLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

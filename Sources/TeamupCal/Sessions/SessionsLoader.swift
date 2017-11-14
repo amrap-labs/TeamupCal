@@ -1,5 +1,5 @@
 //
-//  SessionLoader.swift
+//  SessionsLoader.swift
 //  TeamupCal
 //
 //  Created by Merrick Sapsford on 14/11/2017.
@@ -9,13 +9,15 @@
 import Foundation
 import TeamupKit
 
-internal class SessionLoader {
+internal class SessionsLoader {
     
     // MARK: Properties
+    
+    private weak var sessions: SessionsController?
     
     // MARK: Init
     
     init(teamup: Teamup) {
-        
+        self.sessions = teamup.sessions
     }
 }

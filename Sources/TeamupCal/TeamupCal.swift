@@ -15,12 +15,12 @@ public class TeamupCal {
     
     private weak var teamup: Teamup?
     
-    let sessionLoader: SessionLoader
+    let sessionsLoader: SessionsLoader
     
     // MARK: Init
     
     public init(with teamup: Teamup) {
         self.teamup = teamup
-        self.sessionLoader = SessionLoader(teamup: teamup)
+        self.sessionsLoader = SessionsLoader(teamup: teamup)
     }
 }
