@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import TeamupKit
+import TeamupCal
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let plist = Bundle(for: type(of: self)).path(forResource: "credentials", ofType: "plist")!
+        let dictionary = NSDictionary(contentsOfFile: plist) as! [String : Any]
+        
+        let teamup = Teamup(apiToken: dictionary["apiToken"] as! String,
+                            businessId: dictionary["businessId"] as! Int)
+        let calendar = TeamupCal(with: teamup)
     }
 
     override func didReceiveMemoryWarning() {

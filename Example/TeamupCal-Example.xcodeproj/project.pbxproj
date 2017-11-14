@@ -12,8 +12,25 @@
 		4681A3DD1FBB84A000C0B3BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4681A3DB1FBB84A000C0B3BD /* Main.storyboard */; };
 		4681A3DF1FBB84A000C0B3BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4681A3DE1FBB84A000C0B3BD /* Assets.xcassets */; };
 		4681A3E21FBB84A000C0B3BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4681A3E01FBB84A000C0B3BD /* LaunchScreen.storyboard */; };
+		4681A3EA1FBB983100C0B3BD /* TeamupCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4681A3E91FBB983100C0B3BD /* TeamupCal.framework */; };
+		4681A3EB1FBB983100C0B3BD /* TeamupCal.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4681A3E91FBB983100C0B3BD /* TeamupCal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4681A3F21FBB997C00C0B3BD /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4681A3F11FBB997C00C0B3BD /* credentials.plist */; };
 		D0E84ACC14B66E8C3E075EF3 /* Pods_TeamupCal_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5996614064C39E4462C8F28 /* Pods_TeamupCal_Example.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4681A3EC1FBB983100C0B3BD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4681A3EB1FBB983100C0B3BD /* TeamupCal.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F39D369E805FA4453A60F9F /* Pods-TeamupCal-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-Example.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-Example/Pods-TeamupCal-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -24,6 +41,9 @@
 		4681A3DE1FBB84A000C0B3BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4681A3E11FBB84A000C0B3BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4681A3E31FBB84A000C0B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4681A3E91FBB983100C0B3BD /* TeamupCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeamupCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4681A3ED1FBB983400C0B3BD /* TeamupCal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TeamupCal.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TeamupCal-btfwlnuaffvgzkdqtgxwntrbdcna/Build/Products/Debug-iphoneos/TeamupCal.framework"; sourceTree = "<group>"; };
+		4681A3F11FBB997C00C0B3BD /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../credentials.plist; sourceTree = "<group>"; };
 		82A372A692603C6AFB5E9999 /* Pods-TeamupCal-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-Example/Pods-TeamupCal-Example.release.xcconfig"; sourceTree = "<group>"; };
 		C5996614064C39E4462C8F28 /* Pods_TeamupCal_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamupCal_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -34,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E84ACC14B66E8C3E075EF3 /* Pods_TeamupCal_Example.framework in Frameworks */,
+				4681A3EA1FBB983100C0B3BD /* TeamupCal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +73,7 @@
 		3CECECE67C73D9C43A280CC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4681A3ED1FBB983400C0B3BD /* TeamupCal.framework */,
 				C5996614064C39E4462C8F28 /* Pods_TeamupCal_Example.framework */,
 			);
 			name = Frameworks;
@@ -60,6 +82,7 @@
 		4681A3CB1FBB84A000C0B3BD = {
 			isa = PBXGroup;
 			children = (
+				4681A3E91FBB983100C0B3BD /* TeamupCal.framework */,
 				4681A3D61FBB84A000C0B3BD /* TeamupCal-Example */,
 				4681A3D51FBB84A000C0B3BD /* Products */,
 				0533DE712069B84839FE3CC9 /* Pods */,
@@ -84,6 +107,7 @@
 				4681A3DE1FBB84A000C0B3BD /* Assets.xcassets */,
 				4681A3E01FBB84A000C0B3BD /* LaunchScreen.storyboard */,
 				4681A3E31FBB84A000C0B3BD /* Info.plist */,
+				4681A3F11FBB997C00C0B3BD /* credentials.plist */,
 			);
 			path = "TeamupCal-Example";
 			sourceTree = "<group>";
@@ -101,6 +125,7 @@
 				4681A3D21FBB84A000C0B3BD /* Resources */,
 				AA16206728D239F0E60C6E0C /* [CP] Embed Pods Frameworks */,
 				5AA2FFCE503471ACA3ECF527 /* [CP] Copy Pods Resources */,
+				4681A3EC1FBB983100C0B3BD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4681A3E21FBB84A000C0B3BD /* LaunchScreen.storyboard in Resources */,
+				4681A3F21FBB997C00C0B3BD /* credentials.plist in Resources */,
 				4681A3DF1FBB84A000C0B3BD /* Assets.xcassets in Resources */,
 				4681A3DD1FBB84A000C0B3BD /* Main.storyboard in Resources */,
 			);

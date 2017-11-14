@@ -11,6 +11,7 @@
 		4681A3BB1FBB846C00C0B3BD /* TeamupCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4681A3B11FBB846C00C0B3BD /* TeamupCal.framework */; };
 		4681A3C01FBB846C00C0B3BD /* TeamupCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3BF1FBB846C00C0B3BD /* TeamupCalTests.swift */; };
 		4681A3C21FBB846C00C0B3BD /* TeamupCal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4681A3B41FBB846C00C0B3BD /* TeamupCal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4681A3EF1FBB984100C0B3BD /* TeamupCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3EE1FBB984100C0B3BD /* TeamupCal.swift */; };
 		955D438D09892AC8764A8C00 /* Pods_TeamupCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6B87FF363AE0A5EE7CAE86 /* Pods_TeamupCal.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		4681A3BA1FBB846C00C0B3BD /* TeamupCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamupCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4681A3BF1FBB846C00C0B3BD /* TeamupCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamupCalTests.swift; sourceTree = "<group>"; };
 		4681A3C11FBB846C00C0B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4681A3EE1FBB984100C0B3BD /* TeamupCal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamupCal.swift; sourceTree = "<group>"; };
 		64E79C565EF9445F3CB584C6 /* Pods-TeamupCal-TeamupCalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-TeamupCalTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8530940F91EB5328586386B3 /* Pods-TeamupCal-TeamupCalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-TeamupCalTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B04FEF19B63B0FE3C178CF2 /* Pods_TeamupCal_TeamupCalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamupCal_TeamupCalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4681A3B41FBB846C00C0B3BD /* TeamupCal.h */,
+				4681A3EE1FBB984100C0B3BD /* TeamupCal.swift */,
 				4681A3B51FBB846C00C0B3BD /* Info.plist */,
 			);
 			path = TeamupCal;
@@ -185,6 +188,7 @@
 				TargetAttributes = {
 					4681A3B01FBB846C00C0B3BD = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					4681A3B91FBB846C00C0B3BD = {
@@ -324,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4681A3EF1FBB984100C0B3BD /* TeamupCal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C38DDEB9B11CBDA87D03F025 /* Pods-TeamupCal.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -475,6 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amrap.TeamupCal;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B8DB17685D882BB3DE0AB17 /* Pods-TeamupCal.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -505,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64E79C565EF9445F3CB584C6 /* Pods-TeamupCal-TeamupCalTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TeamupCalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -519,6 +528,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8530940F91EB5328586386B3 /* Pods-TeamupCal-TeamupCalTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TeamupCalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
