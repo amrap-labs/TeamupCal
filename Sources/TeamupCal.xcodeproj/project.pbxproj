@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BC0428B35E265D2551A7B50 /* Pods_TeamupCal_TeamupCalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B04FEF19B63B0FE3C178CF2 /* Pods_TeamupCal_TeamupCalTests.framework */; };
 		4681A3BB1FBB846C00C0B3BD /* TeamupCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4681A3B11FBB846C00C0B3BD /* TeamupCal.framework */; };
 		4681A3C01FBB846C00C0B3BD /* TeamupCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3BF1FBB846C00C0B3BD /* TeamupCalTests.swift */; };
 		4681A3C21FBB846C00C0B3BD /* TeamupCal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4681A3B41FBB846C00C0B3BD /* TeamupCal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		955D438D09892AC8764A8C00 /* Pods_TeamupCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6B87FF363AE0A5EE7CAE86 /* Pods_TeamupCal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +25,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B8DB17685D882BB3DE0AB17 /* Pods-TeamupCal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal/Pods-TeamupCal.release.xcconfig"; sourceTree = "<group>"; };
+		2B6B87FF363AE0A5EE7CAE86 /* Pods_TeamupCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamupCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4681A3B11FBB846C00C0B3BD /* TeamupCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeamupCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4681A3B41FBB846C00C0B3BD /* TeamupCal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamupCal.h; sourceTree = "<group>"; };
 		4681A3B51FBB846C00C0B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4681A3BA1FBB846C00C0B3BD /* TeamupCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeamupCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4681A3BF1FBB846C00C0B3BD /* TeamupCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamupCalTests.swift; sourceTree = "<group>"; };
 		4681A3C11FBB846C00C0B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E79C565EF9445F3CB584C6 /* Pods-TeamupCal-TeamupCalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-TeamupCalTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8530940F91EB5328586386B3 /* Pods-TeamupCal-TeamupCalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-TeamupCalTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests.release.xcconfig"; sourceTree = "<group>"; };
+		9B04FEF19B63B0FE3C178CF2 /* Pods_TeamupCal_TeamupCalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamupCal_TeamupCalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38DDEB9B11CBDA87D03F025 /* Pods-TeamupCal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal/Pods-TeamupCal.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955D438D09892AC8764A8C00 /* Pods_TeamupCal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				4681A3BB1FBB846C00C0B3BD /* TeamupCal.framework in Frameworks */,
+				3BC0428B35E265D2551A7B50 /* Pods_TeamupCal_TeamupCalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E5BAFF83C35738C439BE8DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B6B87FF363AE0A5EE7CAE86 /* Pods_TeamupCal.framework */,
+				9B04FEF19B63B0FE3C178CF2 /* Pods_TeamupCal_TeamupCalTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4681A3A71FBB846C00C0B3BD = {
 			isa = PBXGroup;
 			children = (
 				4681A3B31FBB846C00C0B3BD /* TeamupCal */,
 				4681A3BE1FBB846C00C0B3BD /* TeamupCalTests */,
 				4681A3B21FBB846C00C0B3BD /* Products */,
+				A450A9AF296BF0E694330C98 /* Pods */,
+				3E5BAFF83C35738C439BE8DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +107,17 @@
 			path = TeamupCalTests;
 			sourceTree = "<group>";
 		};
+		A450A9AF296BF0E694330C98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C38DDEB9B11CBDA87D03F025 /* Pods-TeamupCal.debug.xcconfig */,
+				0B8DB17685D882BB3DE0AB17 /* Pods-TeamupCal.release.xcconfig */,
+				64E79C565EF9445F3CB584C6 /* Pods-TeamupCal-TeamupCalTests.debug.xcconfig */,
+				8530940F91EB5328586386B3 /* Pods-TeamupCal-TeamupCalTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,10 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4681A3C51FBB846C00C0B3BD /* Build configuration list for PBXNativeTarget "TeamupCal" */;
 			buildPhases = (
+				5924E2ED10713797270CB4BF /* [CP] Check Pods Manifest.lock */,
 				4681A3AC1FBB846C00C0B3BD /* Sources */,
 				4681A3AD1FBB846C00C0B3BD /* Frameworks */,
 				4681A3AE1FBB846C00C0B3BD /* Headers */,
 				4681A3AF1FBB846C00C0B3BD /* Resources */,
+				5EFBE7B69565B10E97AB7A4A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4681A3C81FBB846C00C0B3BD /* Build configuration list for PBXNativeTarget "TeamupCalTests" */;
 			buildPhases = (
+				0AAB4C19A441D854B1B1D3E6 /* [CP] Check Pods Manifest.lock */,
 				4681A3B61FBB846C00C0B3BD /* Sources */,
 				4681A3B71FBB846C00C0B3BD /* Frameworks */,
 				4681A3B81FBB846C00C0B3BD /* Resources */,
+				FA57F081746E65AAB2C1864E /* [CP] Embed Pods Frameworks */,
+				6EA0E49BA06229DA3E13C615 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +227,97 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AAB4C19A441D854B1B1D3E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeamupCal-TeamupCalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5924E2ED10713797270CB4BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TeamupCal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EFBE7B69565B10E97AB7A4A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TeamupCal/Pods-TeamupCal-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EA0E49BA06229DA3E13C615 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA57F081746E65AAB2C1864E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TeamupKit/TeamupKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeamupKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4681A3AC1FBB846C00C0B3BD /* Sources */ = {
@@ -333,6 +461,7 @@
 		};
 		4681A3C61FBB846C00C0B3BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C38DDEB9B11CBDA87D03F025 /* Pods-TeamupCal.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -353,6 +482,7 @@
 		};
 		4681A3C71FBB846C00C0B3BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B8DB17685D882BB3DE0AB17 /* Pods-TeamupCal.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -373,6 +503,7 @@
 		};
 		4681A3C91FBB846C00C0B3BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64E79C565EF9445F3CB584C6 /* Pods-TeamupCal-TeamupCalTests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TeamupCalTests/Info.plist;
@@ -386,6 +517,7 @@
 		};
 		4681A3CA1FBB846C00C0B3BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8530940F91EB5328586386B3 /* Pods-TeamupCal-TeamupCalTests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TeamupCalTests/Info.plist;
