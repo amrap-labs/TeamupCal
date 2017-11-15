@@ -29,6 +29,11 @@ internal class LiveSessionsLoader: SessionsLoader {
     
     func loadSessions(for date: Date,
                       completion: @escaping LoadCompletion) {
+        
+        //        var components = DateComponents()
+        //        components.day = -12
+        //        return calendar.date(byAdding: components, to: self)
+        
         guard let startDate = date.startOfDay, let endDate = date.endOfDay else {
             completion(.failure(reason: .unknown))
             return

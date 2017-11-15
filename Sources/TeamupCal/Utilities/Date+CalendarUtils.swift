@@ -16,10 +16,6 @@ extension Date {
     }
     
     var startOfDay: Date? {
-//        var components = DateComponents()
-//        components.day = -12
-//        return calendar.date(byAdding: components, to: self)
-
         return calendar.startOfDay(for: self)
     }
     
