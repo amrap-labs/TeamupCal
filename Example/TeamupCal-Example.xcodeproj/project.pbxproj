@@ -42,8 +42,8 @@
 		4681A3E11FBB84A000C0B3BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4681A3E31FBB84A000C0B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4681A3E91FBB983100C0B3BD /* TeamupCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeamupCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4681A3ED1FBB983400C0B3BD /* TeamupCal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TeamupCal.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TeamupCal-btfwlnuaffvgzkdqtgxwntrbdcna/Build/Products/Debug-iphoneos/TeamupCal.framework"; sourceTree = "<group>"; };
 		4681A3F11FBB997C00C0B3BD /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../credentials.plist; sourceTree = "<group>"; };
+		46BDE1F11FBCBAE100B09BDA /* TeamupCal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TeamupCal.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TeamupCal-btfwlnuaffvgzkdqtgxwntrbdcna/Build/Products/Debug-iphoneos/TeamupCal.framework"; sourceTree = "<group>"; };
 		82A372A692603C6AFB5E9999 /* Pods-TeamupCal-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-Example.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-Example/Pods-TeamupCal-Example.release.xcconfig"; sourceTree = "<group>"; };
 		C5996614064C39E4462C8F28 /* Pods_TeamupCal_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamupCal_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,7 +73,7 @@
 		3CECECE67C73D9C43A280CC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4681A3ED1FBB983400C0B3BD /* TeamupCal.framework */,
+				46BDE1F11FBCBAE100B09BDA /* TeamupCal.framework */,
 				C5996614064C39E4462C8F28 /* Pods_TeamupCal_Example.framework */,
 			);
 			name = Frameworks;

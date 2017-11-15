@@ -2,22 +2,16 @@
 //  SessionsLoader.swift
 //  TeamupCal
 //
-//  Created by Merrick Sapsford on 14/11/2017.
+//  Created by Merrick Sapsford on 15/11/2017.
 //  Copyright © 2017 AMRAP Labs. All rights reserved.
 //
 
 import Foundation
 import TeamupKit
 
-internal class SessionsLoader {
+internal protocol SessionsLoader {
     
-    // MARK: Properties
+    var sessions: SessionsController? { get }
     
-    private weak var sessions: SessionsController?
-    
-    // MARK: Init
-    
-    init(teamup: Teamup) {
-        self.sessions = teamup.sessions
-    }
+    init(teamup: Teamup)
 }

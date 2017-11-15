@@ -15,12 +15,19 @@ public class TeamupCal {
     
     private weak var teamup: Teamup?
     
-    let sessionsLoader: SessionsLoader
+    private let sessionsLoader: SessionsLoader
+    private let calendarController: CalendarController
+    
+    public var calendar: SessionsCalendar {
+        return calendarController.calendar
+    }
     
     // MARK: Init
     
     public init(with teamup: Teamup) {
         self.teamup = teamup
-        self.sessionsLoader = SessionsLoader(teamup: teamup)
+        
+        self.sessionsLoader = LiveSessionsLoader(teamup: teamup)
+        self.calendarController = LiveCalendarController()
     }
 }
