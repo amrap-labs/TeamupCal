@@ -1,5 +1,5 @@
 //
-//  LiveCalendarController.swift
+//  LiveSessionsCalendarController.swift
 //  TeamupCal
 //
 //  Created by Merrick Sapsford on 15/11/2017.
@@ -8,23 +8,23 @@
 
 import Foundation
 
-internal class LiveCalendarController: CalendarController {
+internal class LiveSessionsCalendarController: SessionsCalendarController {
     
     // MARK: Properties
     
     private(set) var calendar: SessionsCalendar
-    private(set) weak var sessionsLoader: SessionsLoader?
+    private(set) weak var loader: SessionsLoader?
     
     // MARK: Init
     
-    required init(sessionsLoader: SessionsLoader) {
+    required init(loader: SessionsLoader) {
         self.calendar = SessionsCalendar()
-        self.sessionsLoader = sessionsLoader
+        self.loader = loader
         
         calendar.dataSource = self
     }
 }
 
-extension LiveCalendarController: SessionsCalendarDataSource {
+extension LiveSessionsCalendarController: SessionsCalendarDataSource {
     
 }

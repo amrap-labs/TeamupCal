@@ -16,7 +16,7 @@ public class TeamupCal {
     private let teamup: Teamup
     
     private let sessionsLoader: SessionsLoader
-    private let calendarController: CalendarController
+    private let calendarController: SessionsCalendarController
     
     public var calendar: SessionsCalendar {
         return calendarController.calendar
@@ -28,7 +28,7 @@ public class TeamupCal {
         self.teamup = teamup
         
         self.sessionsLoader = LiveSessionsLoader(teamup: teamup)
-        self.calendarController = LiveCalendarController(sessionsLoader: sessionsLoader)
+        self.calendarController = LiveSessionsCalendarController(loader: sessionsLoader)
         
         sessionsLoader.loadSessions(for: Date()) { (result) in
             switch result {

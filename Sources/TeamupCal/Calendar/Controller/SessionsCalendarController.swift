@@ -1,5 +1,5 @@
 //
-//  CalendarController.swift
+//  SessionsCalendarController.swift
 //  TeamupCal
 //
 //  Created by Merrick Sapsford on 15/11/2017.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-internal protocol CalendarController: class {
+internal protocol SessionsCalendarController: class {
     
     var calendar: SessionsCalendar { get }
-    var sessionsLoader: SessionsLoader? { get }
+    var loader: SessionsLoader? { get }
     
-    init(sessionsLoader: SessionsLoader)
+    init(loader: SessionsLoader)
 }

@@ -18,8 +18,8 @@
 		46BDE1F81FBCBBA100B09BDA /* SessionsCalendar+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1F71FBCBBA100B09BDA /* SessionsCalendar+Week.swift */; };
 		46BDE1FA1FBCBBA700B09BDA /* SessionsCalendar+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1F91FBCBBA700B09BDA /* SessionsCalendar+Day.swift */; };
 		46BDE1FD1FBCBC1C00B09BDA /* SessionsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1FC1FBCBC1C00B09BDA /* SessionsLoader.swift */; };
-		46BDE1FF1FBCBC9000B09BDA /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1FE1FBCBC9000B09BDA /* CalendarController.swift */; };
-		46BDE2011FBCBCCD00B09BDA /* LiveCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE2001FBCBCCD00B09BDA /* LiveCalendarController.swift */; };
+		46BDE1FF1FBCBC9000B09BDA /* SessionsCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1FE1FBCBC9000B09BDA /* SessionsCalendarController.swift */; };
+		46BDE2011FBCBCCD00B09BDA /* LiveSessionsCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE2001FBCBCCD00B09BDA /* LiveSessionsCalendarController.swift */; };
 		46BDE2031FBCBE3700B09BDA /* SessionsCalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE2021FBCBE3700B09BDA /* SessionsCalendarDataSource.swift */; };
 		46BDE2061FBCC1CB00B09BDA /* Date+CalendarUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE2051FBCC1CB00B09BDA /* Date+CalendarUtils.swift */; };
 		46BDE2081FBCC8E900B09BDA /* TeamupCal+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE2071FBCC8E900B09BDA /* TeamupCal+Errors.swift */; };
@@ -52,8 +52,8 @@
 		46BDE1F71FBCBBA100B09BDA /* SessionsCalendar+Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionsCalendar+Week.swift"; sourceTree = "<group>"; };
 		46BDE1F91FBCBBA700B09BDA /* SessionsCalendar+Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionsCalendar+Day.swift"; sourceTree = "<group>"; };
 		46BDE1FC1FBCBC1C00B09BDA /* SessionsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsLoader.swift; sourceTree = "<group>"; };
-		46BDE1FE1FBCBC9000B09BDA /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
-		46BDE2001FBCBCCD00B09BDA /* LiveCalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCalendarController.swift; sourceTree = "<group>"; };
+		46BDE1FE1FBCBC9000B09BDA /* SessionsCalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCalendarController.swift; sourceTree = "<group>"; };
+		46BDE2001FBCBCCD00B09BDA /* LiveSessionsCalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionsCalendarController.swift; sourceTree = "<group>"; };
 		46BDE2021FBCBE3700B09BDA /* SessionsCalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCalendarDataSource.swift; sourceTree = "<group>"; };
 		46BDE2051FBCC1CB00B09BDA /* Date+CalendarUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+CalendarUtils.swift"; sourceTree = "<group>"; };
 		46BDE2071FBCC8E900B09BDA /* TeamupCal+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamupCal+Errors.swift"; sourceTree = "<group>"; };
@@ -157,10 +157,9 @@
 		46BDE1FB1FBCBBF200B09BDA /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				46BDE1FE1FBCBC9000B09BDA /* CalendarController.swift */,
-				46BDE2001FBCBCCD00B09BDA /* LiveCalendarController.swift */,
 				46BDE1F31FBCBB2000B09BDA /* SessionsCalendar.swift */,
 				46BDE2021FBCBE3700B09BDA /* SessionsCalendarDataSource.swift */,
+				46BDE2091FBCD34500B09BDA /* Controller */,
 				46BDE1F21FBCBB0800B09BDA /* Model */,
 			);
 			path = Calendar;
@@ -173,6 +172,15 @@
 				46BDE2051FBCC1CB00B09BDA /* Date+CalendarUtils.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		46BDE2091FBCD34500B09BDA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46BDE1FE1FBCBC9000B09BDA /* SessionsCalendarController.swift */,
+				46BDE2001FBCBCCD00B09BDA /* LiveSessionsCalendarController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A450A9AF296BF0E694330C98 /* Pods */ = {
@@ -396,12 +404,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46BDE1F41FBCBB2000B09BDA /* SessionsCalendar.swift in Sources */,
-				46BDE1FF1FBCBC9000B09BDA /* CalendarController.swift in Sources */,
+				46BDE1FF1FBCBC9000B09BDA /* SessionsCalendarController.swift in Sources */,
 				4681A3EF1FBB984100C0B3BD /* TeamupCal.swift in Sources */,
 				4681A3F41FBB9B2800C0B3BD /* LiveSessionsLoader.swift in Sources */,
 				46BDE1F81FBCBBA100B09BDA /* SessionsCalendar+Week.swift in Sources */,
 				46BDE2081FBCC8E900B09BDA /* TeamupCal+Errors.swift in Sources */,
-				46BDE2011FBCBCCD00B09BDA /* LiveCalendarController.swift in Sources */,
+				46BDE2011FBCBCCD00B09BDA /* LiveSessionsCalendarController.swift in Sources */,
 				46BDE2031FBCBE3700B09BDA /* SessionsCalendarDataSource.swift in Sources */,
 				46BDE2061FBCC1CB00B09BDA /* Date+CalendarUtils.swift in Sources */,
 				46BDE1F61FBCBB3E00B09BDA /* SessionsCalendar+Month.swift in Sources */,
