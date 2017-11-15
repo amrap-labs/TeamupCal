@@ -27,7 +27,7 @@ public class TeamupCal {
     public init(with teamup: Teamup) {
         self.teamup = teamup
         
-        self.sessionsLoader = LiveSessionsLoader(teamup: teamup)
+        self.sessionsLoader = LiveSessionsLoader(sessions: teamup.sessions, auth: teamup.auth)
         self.calendarController = LiveSessionsCalendarController(loader: sessionsLoader)
         
         sessionsLoader.loadSessions(for: Date()) { (result) in

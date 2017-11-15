@@ -18,7 +18,7 @@ internal protocol SessionsLoader: class {
     
     typealias LoadCompletion = (SessionsLoaderResult) -> Void
     
-    init(teamup: Teamup)
+    init(sessions: SessionsController, auth: AuthenticationController)
     
     func loadSessions(for date: Date,
                       completion: @escaping LoadCompletion)

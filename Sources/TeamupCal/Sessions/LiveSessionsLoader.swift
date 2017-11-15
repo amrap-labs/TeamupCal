@@ -20,9 +20,9 @@ internal class LiveSessionsLoader: SessionsLoader {
     
     // MARK: Init
     
-    required init(teamup: Teamup) {
-        self.sessions = teamup.sessions
-        self.auth = teamup.auth
+    required init(sessions: SessionsController, auth: AuthenticationController) {
+        self.sessions = sessions
+        self.auth = auth
     }
     
     // MARK: Loading
