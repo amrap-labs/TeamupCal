@@ -12,28 +12,5 @@ import TeamupCal
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let plist = Bundle(for: type(of: self)).path(forResource: "credentials", ofType: "plist")!
-        let dictionary = NSDictionary(contentsOfFile: plist) as! [String : Any]
-        
-        let teamup = Teamup(apiToken: dictionary["apiToken"] as! String,
-                            businessId: dictionary["businessId"] as! Int)
-        
-        teamup.auth.logIn(email: dictionary["email"] as! String,
-                          password: dictionary["password"] as! String,
-                          success: { (user) in
-                            
-                            let teamupCal = TeamupCal(with: teamup)
-        }, failure: nil)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

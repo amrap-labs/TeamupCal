@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import TeamupKit
+import TeamupCal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var teamup: Teamup!
+    var teamupCal: TeamupCal!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let plist = Bundle(for: type(of: self)).path(forResource: "credentials", ofType: "plist")!
+        let dictionary = NSDictionary(contentsOfFile: plist) as! [String : Any]
+        
+        self.teamup = Teamup(apiToken: dictionary["apiToken"] as! String,
+                             businessId: dictionary["businessId"] as! Int)
+        
+        teamup.auth.logIn(email: dictionary["email"] as! String,
+                          password: dictionary["password"] as! String,
+                          success: { (user) in
+                            
+                            self.teamupCal = TeamupCal(with: self.teamup)
+        }, failure: nil)
+        
         return true
     }
 

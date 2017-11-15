@@ -13,7 +13,7 @@ public class TeamupCal {
     
     // MARK: Properties
     
-    private weak var teamup: Teamup?
+    private let teamup: Teamup
     
     private let sessionsLoader: SessionsLoader
     private let calendarController: CalendarController
