@@ -29,5 +29,14 @@ public class TeamupCal {
         
         self.sessionsLoader = LiveSessionsLoader(teamup: teamup)
         self.calendarController = LiveCalendarController(sessionsLoader: sessionsLoader)
+        
+        sessionsLoader.loadSessions(for: Date()) { (result) in
+            switch result {
+            case .success(let sessions):
+                print("loaded \(sessions.count) sessions")
+                
+            default:()
+            }
+        }
     }
 }

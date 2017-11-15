@@ -20,7 +20,13 @@ class ViewController: UIViewController {
         
         let teamup = Teamup(apiToken: dictionary["apiToken"] as! String,
                             businessId: dictionary["businessId"] as! Int)
-        let teamupCal = TeamupCal(with: teamup)
+        
+        teamup.auth.logIn(email: dictionary["email"] as! String,
+                          password: dictionary["password"] as! String,
+                          success: { (user) in
+                            
+                            let teamupCal = TeamupCal(with: teamup)
+        }, failure: nil)
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,9 +9,17 @@
 import Foundation
 import TeamupKit
 
+internal enum SessionsLoaderResult {
+    case success(sessions: [Session])
+    case failure(reason: TeamupCal.FailureReason)
+}
+
 internal protocol SessionsLoader: class {
     
-    var sessions: SessionsController? { get }
+    typealias LoadCompletion = (SessionsLoaderResult) -> Void
     
     init(teamup: Teamup)
+    
+    func loadSessions(for date: Date,
+                      completion: @escaping LoadCompletion)
 }
