@@ -591,7 +591,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64E79C565EF9445F3CB584C6 /* Pods-TeamupCal-TeamupCalTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TeamupCalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -606,7 +605,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8530940F91EB5328586386B3 /* Pods-TeamupCal-TeamupCalTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TeamupCalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
