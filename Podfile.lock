@@ -8,18 +8,14 @@ PODS:
 
 DEPENDENCIES:
   - DateToolsSwift
-  - TeamupKit (from `~/Dev/Projects/TeamupKit`)
-
-EXTERNAL SOURCES:
-  TeamupKit:
-    :path: ~/Dev/Projects/TeamupKit
+  - TeamupKit (~> 0.1)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   DateToolsSwift: bf69bf9056d9e53c5c03f06e51f219b9b8b02f9e
   KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
-  TeamupKit: 4cc9fdbd1f408c6c07872281a587e4aa89618cd3
+  TeamupKit: 9824afcc3f1de1371e7db42be3f6e4134ccae430
 
-PODFILE CHECKSUM: bddb4e440d43f8bf48d723f4d11eb43677c36006
+PODFILE CHECKSUM: 370ac4e217e2bec44302421eb0dfbedefab5343f
 
 COCOAPODS: 1.3.1
