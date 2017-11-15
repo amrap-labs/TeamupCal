@@ -8,7 +8,10 @@
 
 import Foundation
 
-internal protocol CalendarController {
+internal protocol CalendarController: class {
     
     var calendar: SessionsCalendar { get }
+    var sessionsLoader: SessionsLoader? { get }
+    
+    init(sessionsLoader: SessionsLoader)
 }

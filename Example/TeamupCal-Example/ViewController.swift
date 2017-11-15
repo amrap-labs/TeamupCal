@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         let teamup = Teamup(apiToken: dictionary["apiToken"] as! String,
                             businessId: dictionary["businessId"] as! Int)
-        let calendar = TeamupCal(with: teamup)
+        let teamupCal = TeamupCal(with: teamup)
     }
 
     override func didReceiveMemoryWarning() {

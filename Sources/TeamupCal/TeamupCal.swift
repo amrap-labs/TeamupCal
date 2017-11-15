@@ -28,6 +28,6 @@ public class TeamupCal {
         self.teamup = teamup
         
         self.sessionsLoader = LiveSessionsLoader(teamup: teamup)
-        self.calendarController = LiveCalendarController()
+        self.calendarController = LiveCalendarController(sessionsLoader: sessionsLoader)
     }
 }

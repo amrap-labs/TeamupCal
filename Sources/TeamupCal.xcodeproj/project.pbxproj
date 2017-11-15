@@ -20,6 +20,7 @@
 		46BDE1FD1FBCBC1C00B09BDA /* SessionsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1FC1FBCBC1C00B09BDA /* SessionsLoader.swift */; };
 		46BDE1FF1FBCBC9000B09BDA /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1FE1FBCBC9000B09BDA /* CalendarController.swift */; };
 		46BDE2011FBCBCCD00B09BDA /* LiveCalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE2001FBCBCCD00B09BDA /* LiveCalendarController.swift */; };
+		46BDE2031FBCBE3700B09BDA /* SessionsCalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE2021FBCBE3700B09BDA /* SessionsCalendarDataSource.swift */; };
 		955D438D09892AC8764A8C00 /* Pods_TeamupCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6B87FF363AE0A5EE7CAE86 /* Pods_TeamupCal.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		46BDE1FC1FBCBC1C00B09BDA /* SessionsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsLoader.swift; sourceTree = "<group>"; };
 		46BDE1FE1FBCBC9000B09BDA /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		46BDE2001FBCBCCD00B09BDA /* LiveCalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCalendarController.swift; sourceTree = "<group>"; };
+		46BDE2021FBCBE3700B09BDA /* SessionsCalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCalendarDataSource.swift; sourceTree = "<group>"; };
 		64E79C565EF9445F3CB584C6 /* Pods-TeamupCal-TeamupCalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-TeamupCalTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8530940F91EB5328586386B3 /* Pods-TeamupCal-TeamupCalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamupCal-TeamupCalTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests.release.xcconfig"; sourceTree = "<group>"; };
 		9B04FEF19B63B0FE3C178CF2 /* Pods_TeamupCal_TeamupCalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamupCal_TeamupCalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +116,6 @@
 				4681A3EE1FBB984100C0B3BD /* TeamupCal.swift */,
 				4681A3F51FBB9B2B00C0B3BD /* Sessions */,
 				46BDE1FB1FBCBBF200B09BDA /* Calendar */,
-				46BDE1F21FBCBB0800B09BDA /* Model */,
 				4681A3B51FBB846C00C0B3BD /* Info.plist */,
 			);
 			path = TeamupCal;
@@ -141,7 +142,6 @@
 		46BDE1F21FBCBB0800B09BDA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				46BDE1F31FBCBB2000B09BDA /* SessionsCalendar.swift */,
 				46BDE1F51FBCBB3E00B09BDA /* SessionsCalendar+Month.swift */,
 				46BDE1F71FBCBBA100B09BDA /* SessionsCalendar+Week.swift */,
 				46BDE1F91FBCBBA700B09BDA /* SessionsCalendar+Day.swift */,
@@ -154,6 +154,9 @@
 			children = (
 				46BDE1FE1FBCBC9000B09BDA /* CalendarController.swift */,
 				46BDE2001FBCBCCD00B09BDA /* LiveCalendarController.swift */,
+				46BDE1F31FBCBB2000B09BDA /* SessionsCalendar.swift */,
+				46BDE2021FBCBE3700B09BDA /* SessionsCalendarDataSource.swift */,
+				46BDE1F21FBCBB0800B09BDA /* Model */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				4681A3F41FBB9B2800C0B3BD /* LiveSessionsLoader.swift in Sources */,
 				46BDE1F81FBCBBA100B09BDA /* SessionsCalendar+Week.swift in Sources */,
 				46BDE2011FBCBCCD00B09BDA /* LiveCalendarController.swift in Sources */,
+				46BDE2031FBCBE3700B09BDA /* SessionsCalendarDataSource.swift in Sources */,
 				46BDE1F61FBCBB3E00B09BDA /* SessionsCalendar+Month.swift in Sources */,
 				46BDE1FA1FBCBBA700B09BDA /* SessionsCalendar+Day.swift in Sources */,
 				46BDE1FD1FBCBC1C00B09BDA /* SessionsLoader.swift in Sources */,

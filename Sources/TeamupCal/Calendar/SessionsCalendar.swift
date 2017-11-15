@@ -1,5 +1,5 @@
 //
-//  SessionsLoader.swift
+//  SessionsCalendar.swift
 //  TeamupCal
 //
 //  Created by Merrick Sapsford on 15/11/2017.
@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import TeamupKit
 
-internal protocol SessionsLoader: class {
+public class SessionsCalendar {
     
-    var sessions: SessionsController? { get }
+    // MARK: Properties
     
-    init(teamup: Teamup)
+    internal weak var dataSource: SessionsCalendarDataSource?
 }

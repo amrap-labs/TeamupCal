@@ -1,5 +1,5 @@
 //
-//  SessionsCalendar.swift
+//  SessionsCalendarDataSource.swift
 //  TeamupCal
 //
 //  Created by Merrick Sapsford on 15/11/2017.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-public class SessionsCalendar {
+internal protocol SessionsCalendarDataSource: class {
     
 }

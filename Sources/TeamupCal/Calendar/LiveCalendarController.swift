@@ -13,10 +13,18 @@ internal class LiveCalendarController: CalendarController {
     // MARK: Properties
     
     private(set) var calendar: SessionsCalendar
+    private(set) weak var sessionsLoader: SessionsLoader?
     
     // MARK: Init
     
-    init() {
+    required init(sessionsLoader: SessionsLoader) {
         self.calendar = SessionsCalendar()
+        self.sessionsLoader = sessionsLoader
+        
+        calendar.dataSource = self
     }
+}
+
+extension LiveCalendarController: SessionsCalendarDataSource {
+    
 }
