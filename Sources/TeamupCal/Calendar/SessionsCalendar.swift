@@ -13,4 +13,6 @@ public class SessionsCalendar {
     // MARK: Properties
     
     internal weak var dataSource: SessionsCalendarDataSource?
+    
+    private let cache = CacheManager<SessionsCalendar.Day>()
 }

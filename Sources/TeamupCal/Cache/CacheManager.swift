@@ -8,6 +8,6 @@
 
 import Foundation
 
-internal class CacheManager {
+internal class CacheManager<T : Cacheable> {
     
 }

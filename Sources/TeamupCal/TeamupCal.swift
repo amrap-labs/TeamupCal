@@ -30,9 +30,11 @@ public class TeamupCal {
         self.sessionsLoader = LiveSessionsLoader(sessions: teamup.sessions, auth: teamup.auth)
         self.calendarController = LiveSessionsCalendarController(loader: sessionsLoader)
         
-        sessionsLoader.loadSessions(for: Date()) { (result) in
+        let date = Date()
+        sessionsLoader.loadSessions(for: date) { (result) in
             switch result {
             case .success(let sessions):
+                let day = SessionsCalendar.Day(for: date, sessions: sessions)
                 print("loaded \(sessions.count) sessions")
                 
             default:()
