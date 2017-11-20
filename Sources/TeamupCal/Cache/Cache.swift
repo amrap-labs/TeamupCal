@@ -8,9 +8,9 @@
 
 import Foundation
 
-typealias CacheIdentifier = String
+internal typealias CacheIdentifier = String
 
-enum CacheLifetime {
+internal enum CacheLifetime {
     
     case infinite
     case weeks(count: Int)

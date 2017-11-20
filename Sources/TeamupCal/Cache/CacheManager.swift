@@ -8,6 +8,17 @@
 
 import Foundation
 
-internal class CacheManager<T : Cacheable> {
+internal class CacheManager<ItemType : Cacheable> {
     
+    private typealias Item = CacheItem<ItemType>
+    
+    private var map = [Int : CacheItem<ItemType>]()
+    
+    func item(for identifier: CacheIdentifier, completion: (ItemType?) -> Void) {
+        
+    }
+    
+    func persist(_ item: ItemType, completion: ((Bool) -> Void)?) {
+        
+    }
 }

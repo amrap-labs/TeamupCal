@@ -11,12 +11,14 @@ import TeamupKit
 
 public extension SessionsCalendar {
     
-    public class Day {
+    public class Day: Cacheable {
         
         // MARK: Properties
         
         let date: Date
         let sessions: [Session]
+        
+        // MARK: Init
         
         init(for date: Date, sessions: [Session]) {
             self.date = date
@@ -25,12 +27,20 @@ public extension SessionsCalendar {
     }
 }
 
-extension SessionsCalendar.Day: Cacheable {
+extension SessionsCalendar.Day {
     
-    var lifetime: CacheLifetime {
+    var cacheLifetime: CacheLifetime {
         return .infinite
     }
-    var identifier: CacheIdentifier {
+    var cacheIdentifier: CacheIdentifier {
         return ""
+    }
+    
+    public var hashValue: Int {
+        return date.hashValue
+    }
+    
+    public static func ==(lhs: SessionsCalendar.Day, rhs: SessionsCalendar.Day) -> Bool {
+        return lhs.date == rhs.date
     }
 }
