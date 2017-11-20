@@ -15,7 +15,7 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
     private(set) var calendar: SessionsCalendar
     private(set) weak var loader: SessionsLoader?
     
-    private let cache = CacheManager<SessionsCalendar.Day>()
+    private let cache = CacheStore<SessionsCalendar.Day>()
 
     // MARK: Init
     

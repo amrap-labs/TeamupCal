@@ -8,11 +8,11 @@
 
 import Foundation
 
-internal class CacheManager<ItemType : Cacheable> {
+internal class CacheStore<ItemType : Cacheable> {
     
     private typealias Item = CacheItem<ItemType>
     
-    private var map = [Int : CacheItem<ItemType>]()
+    private var map = [Int: Item]()
     
     func item(for identifier: CacheIdentifier, completion: (ItemType?) -> Void) {
         
