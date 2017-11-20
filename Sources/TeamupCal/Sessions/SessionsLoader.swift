@@ -9,14 +9,9 @@
 import Foundation
 import TeamupKit
 
-internal enum SessionsLoaderResult {
-    case success(sessions: [Session])
-    case failure(reason: TeamupCal.FailureReason)
-}
-
 internal protocol SessionsLoader: class {
     
-    typealias LoadCompletion = (SessionsLoaderResult) -> Void
+    typealias LoadCompletion = (SessionsLoadResult) -> Void
     
     init(sessions: SessionsController, auth: AuthenticationController)
     

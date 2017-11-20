@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                           success: { (user) in
                             
                             self.teamupCal = TeamupCal(with: self.teamup)
+                            self.teamupCal.calendar.load()
         }, failure: nil)
         
         return true

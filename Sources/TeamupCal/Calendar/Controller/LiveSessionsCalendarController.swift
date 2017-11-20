@@ -15,6 +15,8 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
     private(set) var calendar: SessionsCalendar
     private(set) weak var loader: SessionsLoader?
     
+    private let cache = CacheManager<SessionsCalendar.Day>()
+
     // MARK: Init
     
     required init(loader: SessionsLoader) {
@@ -27,4 +29,13 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
 
 extension LiveSessionsCalendarController: SessionsCalendarDataSource {
     
+    func calendar(_ calendar: SessionsCalendar,
+                  requestSessionsFor date: Date,
+                  completion: @escaping SessionsCalendar.DataRequestCompletion) {
+        
+        // TODO - Use cache
+        loader?.loadSessions(for: date, completion: { (result) in
+            completion(result)
+        })
+    }
 }

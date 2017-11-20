@@ -7,12 +7,24 @@
 //
 
 import Foundation
+import TeamupKit
 
 public class SessionsCalendar {
+    
+    // MARK: Types
+    
+    internal typealias DataRequestCompletion = (SessionsLoadResult) -> Void
     
     // MARK: Properties
     
     internal weak var dataSource: SessionsCalendarDataSource?
+        
+    // MARK: Data
     
-    private let cache = CacheManager<SessionsCalendar.Day>()
+    // TODO - Remove
+    public func load() {
+        dataSource?.calendar(self, requestSessionsFor: Date(), completion: { (result) in
+            dump(result)
+        })
+    }
 }

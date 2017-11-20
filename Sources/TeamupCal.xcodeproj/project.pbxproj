@@ -10,6 +10,7 @@
 		3BC0428B35E265D2551A7B50 /* Pods_TeamupCal_TeamupCalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B04FEF19B63B0FE3C178CF2 /* Pods_TeamupCal_TeamupCalTests.framework */; };
 		4631FCA31FC32B6200DADCDE /* Cacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4631FCA21FC32B6200DADCDE /* Cacheable.swift */; };
 		4631FCA51FC32C0000DADCDE /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4631FCA41FC32C0000DADCDE /* Cache.swift */; };
+		4631FCA91FC3375D00DADCDE /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4631FCA81FC3375D00DADCDE /* Results.swift */; };
 		4681A3BB1FBB846C00C0B3BD /* TeamupCal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4681A3B11FBB846C00C0B3BD /* TeamupCal.framework */; };
 		4681A3C01FBB846C00C0B3BD /* TeamupCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3BF1FBB846C00C0B3BD /* TeamupCalTests.swift */; };
 		4681A3C21FBB846C00C0B3BD /* TeamupCal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4681A3B41FBB846C00C0B3BD /* TeamupCal.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 		2B6B87FF363AE0A5EE7CAE86 /* Pods_TeamupCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeamupCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4631FCA21FC32B6200DADCDE /* Cacheable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacheable.swift; sourceTree = "<group>"; };
 		4631FCA41FC32C0000DADCDE /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		4631FCA81FC3375D00DADCDE /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		4681A3B11FBB846C00C0B3BD /* TeamupCal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TeamupCal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4681A3B41FBB846C00C0B3BD /* TeamupCal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeamupCal.h; sourceTree = "<group>"; };
 		4681A3B51FBB846C00C0B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			children = (
 				46BDE2071FBCC8E900B09BDA /* TeamupCal+Errors.swift */,
 				46BDE2051FBCC1CB00B09BDA /* Date+CalendarUtils.swift */,
+				4631FCA81FC3375D00DADCDE /* Results.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				46BDE2081FBCC8E900B09BDA /* TeamupCal+Errors.swift in Sources */,
 				46BDE2011FBCBCCD00B09BDA /* LiveSessionsCalendarController.swift in Sources */,
 				46BDE2031FBCBE3700B09BDA /* SessionsCalendarDataSource.swift in Sources */,
+				4631FCA91FC3375D00DADCDE /* Results.swift in Sources */,
 				46BDE2061FBCC1CB00B09BDA /* Date+CalendarUtils.swift in Sources */,
 				4631FCA31FC32B6200DADCDE /* Cacheable.swift in Sources */,
 				46BDE1F61FBCBB3E00B09BDA /* SessionsCalendar+Month.swift in Sources */,
