@@ -19,10 +19,17 @@ internal class CacheStore<ItemType : Cacheable> {
         self.container = container
     }
     
+    // MARK: Loading
+    
     func item(for identifier: CacheIdentifier,
               completion: @escaping ((ItemType?) -> Void)) {
         
         if let item = map[identifier] {
+            guard self.isAValid(item: item) else {
+                completion(nil)
+                return
+            }
+            
             completion(item.data)
             
         } else { // fallback to disk
@@ -31,10 +38,29 @@ internal class CacheStore<ItemType : Cacheable> {
                            as: Item.self,
                            completion:
                 { (item, error) in
+                    guard self.isAValid(item: item) else {
+                        completion(nil)
+                        return
+                    }
+                    
+                    self.map[identifier] = item
                     completion(item?.data)
             })
         }
     }
+    
+    private func isAValid(item: Item?) -> Bool {
+        guard let item = item else {
+            return false
+        }
+        let isStale = item.isStale
+        if isStale {
+            map.removeValue(forKey: item.identifier)
+        }
+        return !isStale
+    }
+    
+    // MARK: Persisting
     
     func persist(_ item: ItemType, completion: ((Bool) -> Void)?) {
         let item = Item(for: item)
