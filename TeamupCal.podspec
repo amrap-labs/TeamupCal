@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/amrap-labs/TeamupCal.git", :tag => s.version.to_s }
   s.source_files = "Sources/TeamupCal/**/*.{h,m,swift}"
 
-  s.dependency 'TeamupKit', '~> 0.1'
+  s.dependency 'TeamupKit', '~> 0.2'
   s.dependency 'Disk', '~> 0.3'
 
 end

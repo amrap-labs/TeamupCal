@@ -6,7 +6,7 @@ use_frameworks!
 
 def shared_pods
 
-    pod 'TeamupKit', '~> 0.1'
+    pod 'TeamupKit', '~> 0.2'
     pod 'Disk', '~> 0.3'
 end
 
