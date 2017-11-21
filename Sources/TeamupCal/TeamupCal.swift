@@ -18,7 +18,7 @@ public class TeamupCal {
     private let sessionsLoader: SessionsLoader
     private let calendarController: SessionsCalendarController
     
-    private let cacheRoot = CacheContainer(path: "TeamupCal")
+    private let cacheRoot: CacheContainer
     
     public var calendar: SessionsCalendar {
         return calendarController.calendar
@@ -26,8 +26,15 @@ public class TeamupCal {
     
     // MARK: Init
     
-    public init(with teamup: Teamup) {
+    public init?(with teamup: Teamup) {
+        guard let currentUser = teamup.auth.currentUser else {
+            print("TeamupCal could not initialize due to a fault in TeamupKit ☹️.")
+            print("Please raise an issue at https://github.com/amrap-labs/TeamupKit.")
+            return nil
+        }
+        
         self.teamup = teamup
+        self.cacheRoot = CacheContainer(path: "TeamupCal/\(currentUser.identifier)")
         
         self.sessionsLoader = LiveSessionsLoader(sessions: teamup.sessions,
                                                  auth: teamup.auth)
