@@ -15,19 +15,19 @@ public extension SessionsCalendar {
         
         // MARK: Properties
         
-        let date: Date
-        let sessions: [Session]
+        public let date: Date
+        public let sessions: [Session]
         
         // MARK: Init
         
-        init(for date: Date, sessions: [Session]) {
+        internal init(for date: Date, sessions: [Session]) {
             self.date = date
             self.sessions = sessions
         }
         
         // MARK: Utility
         
-        class func cacheIdentifier(for date: Date) -> CacheIdentifier {
+        internal class func cacheIdentifier(for date: Date) -> CacheIdentifier {
             let day = Day(for: date, sessions: [])
             return day.cacheIdentifier
         }
