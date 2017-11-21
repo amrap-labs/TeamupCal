@@ -24,6 +24,8 @@ public class SessionsCalendar {
     
     internal weak var dataSource: SessionsCalendarDataSource?
     
+    private var years = [Year]()
+    
     // MARK: Init
     
     init() {
