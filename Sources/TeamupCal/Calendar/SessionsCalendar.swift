@@ -23,13 +23,26 @@ public class SessionsCalendar {
     // MARK: Properties
     
     internal weak var dataSource: SessionsCalendarDataSource?
+    
+    // MARK: Init
+    
+    init() {
         
+    }
+    
     // MARK: Data
     
-    // TODO - Remove
-    public func load() {
-        dataSource?.calendar(self, requestDayFor: Date(), completion: { (result) in
-            
+    private func load(dayFor date: Date,
+                      completion: @escaping ((Day) -> Void)) {
+        dataSource?.calendar(self, requestDayFor: date, completion: { (result) in
+            switch result {
+            case .success(let day):
+                completion(day)
+                
+            case .failure:
+                // TODO - Post to delegate or something
+                print("CALENDAR - Failed to load day for \(date)")
+            }
         })
     }
 }

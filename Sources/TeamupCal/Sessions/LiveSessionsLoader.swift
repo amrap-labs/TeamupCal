@@ -30,7 +30,7 @@ internal class LiveSessionsLoader: SessionsLoader {
     func loadSessions(for date: Date,
                       completion: @escaping LoadCompletion) {
         
-        guard let startDate = date.startOfDay, let endDate = date.endOfDay else {
+        guard let startDate = date.tu_startOfDay, let endDate = date.tu_endOfDay else {
             completion(.failure(reason: .unknown))
             return
         }

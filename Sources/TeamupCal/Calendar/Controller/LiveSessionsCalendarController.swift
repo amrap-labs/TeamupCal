@@ -39,10 +39,10 @@ extension LiveSessionsCalendarController: SessionsCalendarDataSource {
         let identifier = SessionsCalendar.Day.cacheIdentifier(for: date)
         cache.item(for: identifier) { (day) in
             
-            if let day = day {
+            if let day = day { // loaded from cache 🚀
                 completion(.success(day: day))
                 
-            } else {
+            } else { // fallback to request 🤪
                 
                 self.loader?.loadSessions(for: date, completion: { (result) in
                     

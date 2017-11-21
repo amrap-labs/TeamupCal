@@ -14,11 +14,11 @@ extension Date {
         return Calendar.current
     }
     
-    var startOfDay: Date? {
+    var tu_startOfDay: Date? {
         return calendar.startOfDay(for: self)
     }
     
-    var endOfDay: Date? {
+    var tu_endOfDay: Date? {
         var components = DateComponents()
         components.day = 1
         components.second = -1
