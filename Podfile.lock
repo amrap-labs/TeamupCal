@@ -2,7 +2,7 @@ PODS:
   - Alamofire (4.5.1)
   - Disk (0.3.2)
   - KeychainSwift (8.0.2)
-  - TeamupKit (0.2.0):
+  - TeamupKit (0.2.1):
     - Alamofire (~> 4.5.0)
     - KeychainSwift (~> 8.0)
 
@@ -14,7 +14,7 @@ SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Disk: 52ebc1656944971c73a661458713b3b7497c1b4c
   KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
-  TeamupKit: 8ac3f2b8b6c7529d531e63bf9a8572a0a575f1f1
+  TeamupKit: 7fbf588a32aadc8248eca84a69f462ba026ec83e
 
 PODFILE CHECKSUM: 6337770691f36e52f132495f4a56e6cb802a19db
 
