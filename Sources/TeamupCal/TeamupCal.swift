@@ -34,6 +34,7 @@ public class TeamupCal {
         }
         
         self.teamup = teamup
+        // TODO - This needs to monitor auth status
         self.cacheRoot = CacheContainer(path: "TeamupCal/\(currentUser.identifier)")
         
         self.sessionsLoader = LiveSessionsLoader(sessions: teamup.sessions,
