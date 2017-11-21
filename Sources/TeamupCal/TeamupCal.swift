@@ -18,6 +18,8 @@ public class TeamupCal {
     private let sessionsLoader: SessionsLoader
     private let calendarController: SessionsCalendarController
     
+    private let cacheRoot = CacheContainer(path: "TeamupCal")
+    
     public var calendar: SessionsCalendar {
         return calendarController.calendar
     }
@@ -27,7 +29,9 @@ public class TeamupCal {
     public init(with teamup: Teamup) {
         self.teamup = teamup
         
-        self.sessionsLoader = LiveSessionsLoader(sessions: teamup.sessions, auth: teamup.auth)
-        self.calendarController = LiveSessionsCalendarController(loader: sessionsLoader)
+        self.sessionsLoader = LiveSessionsLoader(sessions: teamup.sessions,
+                                                 auth: teamup.auth)
+        self.calendarController = LiveSessionsCalendarController(loader: sessionsLoader,
+                                                                 cacheRoot: cacheRoot)
     }
 }

@@ -19,5 +19,6 @@ Pod::Spec.new do |s|
   s.source_files = "Sources/TeamupCal/**/*.{h,m,swift}"
 
   s.dependency 'TeamupKit', '~> 0.1'
+  s.dependency 'Disk', '~> 0.3'
 
 end

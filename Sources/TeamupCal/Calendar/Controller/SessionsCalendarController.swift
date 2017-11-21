@@ -13,5 +13,5 @@ internal protocol SessionsCalendarController: class {
     var calendar: SessionsCalendar { get }
     var loader: SessionsLoader? { get }
     
-    init(loader: SessionsLoader)
+    init(loader: SessionsLoader, cacheRoot: CacheContainer)
 }

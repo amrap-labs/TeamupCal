@@ -15,13 +15,16 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
     private(set) var calendar: SessionsCalendar
     private(set) weak var loader: SessionsLoader?
     
-    private let cache = CacheStore<SessionsCalendar.Day>()
+    private let cache: CacheStore<SessionsCalendar.Day>
 
     // MARK: Init
     
-    required init(loader: SessionsLoader) {
+    required init(loader: SessionsLoader, cacheRoot: CacheContainer) {
         self.calendar = SessionsCalendar()
         self.loader = loader
+        
+        let cacheContainer = CacheContainer(path: "Calendar", inside: cacheRoot)
+        self.cache = CacheStore<SessionsCalendar.Day>(for: cacheContainer)
         
         calendar.dataSource = self
     }

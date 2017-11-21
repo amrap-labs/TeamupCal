@@ -7,6 +7,7 @@ use_frameworks!
 def shared_pods
 
     pod 'TeamupKit', '~> 0.1'
+    pod 'Disk', '~> 0.3'
 end
 
 target 'TeamupCal' do

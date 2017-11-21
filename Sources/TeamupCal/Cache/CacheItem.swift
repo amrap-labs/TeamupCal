@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CacheItem<Item : Cacheable>: Decodable {
+class CacheItem<Item : Cacheable>: Codable, Hashable {
     
     // MARK: Properties
     
@@ -25,5 +25,16 @@ class CacheItem<Item : Cacheable>: Decodable {
     
     init(for item: Item) {
         self.item = item
+    }
+}
+
+extension CacheItem {
+    
+    var hashValue: Int {
+        return item.hashValue
+    }
+    
+    static func ==(lhs: CacheItem, rhs: CacheItem) -> Bool {
+        return lhs.item == rhs.item
     }
 }

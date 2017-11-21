@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Cacheable: Hashable, Decodable {
+protocol Cacheable: Hashable, Codable {
     
     var cacheLifetime: CacheLifetime { get }
     var cacheIdentifier: CacheIdentifier { get }

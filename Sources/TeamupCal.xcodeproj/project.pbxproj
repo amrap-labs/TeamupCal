@@ -17,6 +17,8 @@
 		4681A3C21FBB846C00C0B3BD /* TeamupCal.h in Headers */ = {isa = PBXBuildFile; fileRef = 4681A3B41FBB846C00C0B3BD /* TeamupCal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4681A3EF1FBB984100C0B3BD /* TeamupCal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3EE1FBB984100C0B3BD /* TeamupCal.swift */; };
 		4681A3F41FBB9B2800C0B3BD /* LiveSessionsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3F31FBB9B2800C0B3BD /* LiveSessionsLoader.swift */; };
+		468834861FC46ADF006F100A /* CacheContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468834851FC46ADF006F100A /* CacheContainer.swift */; };
+		468834881FC47667006F100A /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468834871FC47667006F100A /* Date+Formatting.swift */; };
 		46BDE1F41FBCBB2000B09BDA /* SessionsCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1F31FBCBB2000B09BDA /* SessionsCalendar.swift */; };
 		46BDE1F61FBCBB3E00B09BDA /* SessionsCalendar+Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1F51FBCBB3E00B09BDA /* SessionsCalendar+Month.swift */; };
 		46BDE1F81FBCBBA100B09BDA /* SessionsCalendar+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1F71FBCBBA100B09BDA /* SessionsCalendar+Week.swift */; };
@@ -56,6 +58,8 @@
 		4681A3C11FBB846C00C0B3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4681A3EE1FBB984100C0B3BD /* TeamupCal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamupCal.swift; sourceTree = "<group>"; };
 		4681A3F31FBB9B2800C0B3BD /* LiveSessionsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionsLoader.swift; sourceTree = "<group>"; };
+		468834851FC46ADF006F100A /* CacheContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheContainer.swift; sourceTree = "<group>"; };
+		468834871FC47667006F100A /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
 		46BDE1F31FBCBB2000B09BDA /* SessionsCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCalendar.swift; sourceTree = "<group>"; };
 		46BDE1F51FBCBB3E00B09BDA /* SessionsCalendar+Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionsCalendar+Month.swift"; sourceTree = "<group>"; };
 		46BDE1F71FBCBBA100B09BDA /* SessionsCalendar+Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionsCalendar+Week.swift"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			children = (
 				46BDE2071FBCC8E900B09BDA /* TeamupCal+Errors.swift */,
 				46BDE2051FBCC1CB00B09BDA /* Date+CalendarUtils.swift */,
+				468834871FC47667006F100A /* Date+Formatting.swift */,
 				4631FCA81FC3375D00DADCDE /* Results.swift */,
 			);
 			path = Utilities;
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4631FCA41FC32C0000DADCDE /* Cache.swift */,
+				468834851FC46ADF006F100A /* CacheContainer.swift */,
 				46BDE2111FBCDA4D00B09BDA /* CacheStore.swift */,
 				4631FCA21FC32B6200DADCDE /* Cacheable.swift */,
 				4631FCAA1FC35A9700DADCDE /* CacheItem.swift */,
@@ -403,12 +409,14 @@
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-TeamupCal-TeamupCalTests/Pods-TeamupCal-TeamupCalTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TeamupKit/TeamupKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeamupKit.framework",
 			);
@@ -424,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468834861FC46ADF006F100A /* CacheContainer.swift in Sources */,
 				46BDE2121FBCDA4D00B09BDA /* CacheStore.swift in Sources */,
 				4631FCA51FC32C0000DADCDE /* Cache.swift in Sources */,
 				46BDE1F41FBCBB2000B09BDA /* SessionsCalendar.swift in Sources */,
@@ -439,6 +448,7 @@
 				46BDE2061FBCC1CB00B09BDA /* Date+CalendarUtils.swift in Sources */,
 				4631FCA31FC32B6200DADCDE /* Cacheable.swift in Sources */,
 				46BDE1F61FBCBB3E00B09BDA /* SessionsCalendar+Month.swift in Sources */,
+				468834881FC47667006F100A /* Date+Formatting.swift in Sources */,
 				46BDE1FA1FBCBBA700B09BDA /* SessionsCalendar+Day.swift in Sources */,
 				46BDE1FD1FBCBC1C00B09BDA /* SessionsLoader.swift in Sources */,
 			);
