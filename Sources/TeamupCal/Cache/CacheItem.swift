@@ -12,29 +12,29 @@ class CacheItem<Item : Cacheable>: Codable, Hashable {
     
     // MARK: Properties
     
-    let item: Item
+    let data: Item
     
     var identifier: CacheIdentifier {
-        return item.cacheIdentifier
+        return data.cacheIdentifier
     }
     var lifetime: CacheLifetime {
-        return item.cacheLifetime
+        return data.cacheLifetime
     }
     
     // MARK: Init
     
     init(for item: Item) {
-        self.item = item
+        self.data = item
     }
 }
 
 extension CacheItem {
     
     var hashValue: Int {
-        return item.hashValue
+        return data.hashValue
     }
     
     static func ==(lhs: CacheItem, rhs: CacheItem) -> Bool {
-        return lhs.item == rhs.item
+        return lhs.data == rhs.data
     }
 }

@@ -23,15 +23,15 @@ internal class CacheStore<ItemType : Cacheable> {
               completion: @escaping ((ItemType?) -> Void)) {
         
         if let item = map[identifier] {
-            completion(item.item)
+            completion(item.data)
             
         } else { // fallback to disk
             
             container.read(dataWith: identifier,
-                           as: ItemType.self,
+                           as: Item.self,
                            completion:
                 { (item, error) in
-                    completion(item)
+                    completion(item?.data)
             })
         }
     }
