@@ -28,7 +28,7 @@ public class SessionsCalendar {
     
     // TODO - Remove
     public func load() {
-        dataSource?.calendar(self, requestSessionsFor: Date(), completion: { (result) in
+        dataSource?.calendar(self, requestDayFor: Date(), completion: { (result) in
             
         })
     }

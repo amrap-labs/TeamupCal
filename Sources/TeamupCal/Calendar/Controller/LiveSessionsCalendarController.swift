@@ -33,7 +33,7 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
 extension LiveSessionsCalendarController: SessionsCalendarDataSource {
     
     func calendar(_ calendar: SessionsCalendar,
-                  requestSessionsFor date: Date,
+                  requestDayFor date: Date,
                   completion: @escaping SessionsCalendar.DataRequestCompletion) {
         
         let identifier = SessionsCalendar.Day.cacheIdentifier(for: date)

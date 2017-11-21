@@ -11,6 +11,6 @@ import Foundation
 internal protocol SessionsCalendarDataSource: class {
     
     func calendar(_ calendar: SessionsCalendar,
-                  requestSessionsFor date: Date,
+                  requestDayFor date: Date,
                   completion: @escaping SessionsCalendar.DataRequestCompletion)
 }
