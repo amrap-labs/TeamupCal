@@ -13,29 +13,37 @@ internal class CacheStore<ItemType : Cacheable> {
     private typealias Item = CacheItem<ItemType>
     
     private let container: CacheContainer
-    private var map = [Int: Item]()
+    private var map = [CacheIdentifier: Item]()
     
     init(for container: CacheContainer) {
         self.container = container
     }
     
-    func item(for identifier: CacheIdentifier, completion: (ItemType?) -> Void) {
+    func item(for identifier: CacheIdentifier,
+              completion: @escaping ((ItemType?) -> Void)) {
         
+        if let item = map[identifier] {
+            completion(item.item)
+            
+        } else { // fallback to disk
+            
+            container.read(dataWith: identifier,
+                           as: ItemType.self,
+                           completion:
+                { (item, error) in
+                    completion(item)
+            })
+        }
     }
     
     func persist(_ item: ItemType, completion: ((Bool) -> Void)?) {
         let item = Item(for: item)
-        map[item.hashValue] = item
+        map[item.identifier] = item
         
         container.save(data: item,
                        with: item.identifier)
-        { (result) in
-            switch result {
-            case .success:
-                completion?(true)
-            case .failure:
-                completion?(false)
-            }
+        { (error) in
+            completion?(error == nil)
         }
     }
 }

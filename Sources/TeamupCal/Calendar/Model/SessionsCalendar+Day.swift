@@ -24,6 +24,13 @@ public extension SessionsCalendar {
             self.date = date
             self.sessions = sessions
         }
+        
+        // MARK: Utility
+        
+        class func cacheIdentifier(for date: Date) -> CacheIdentifier {
+            let day = Day(for: date, sessions: [])
+            return day.cacheIdentifier
+        }
     }
 }
 

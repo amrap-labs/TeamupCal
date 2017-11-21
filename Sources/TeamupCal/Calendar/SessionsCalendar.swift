@@ -13,7 +13,12 @@ public class SessionsCalendar {
     
     // MARK: Types
     
-    internal typealias DataRequestCompletion = (SessionsLoadResult) -> Void
+    enum CalendarLoadResult {
+        case success(day: Day)
+        case failure(reason: TeamupCal.FailureReason)
+    }
+    
+    internal typealias DataRequestCompletion = (CalendarLoadResult) -> Void
     
     // MARK: Properties
     
@@ -24,7 +29,7 @@ public class SessionsCalendar {
     // TODO - Remove
     public func load() {
         dataSource?.calendar(self, requestSessionsFor: Date(), completion: { (result) in
-            dump(result)
+            
         })
     }
 }

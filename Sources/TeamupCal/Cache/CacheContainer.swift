@@ -48,27 +48,42 @@ class CacheContainer {
 
 extension CacheContainer {
     
-    enum CacheOperationResult {
-        case success
-        case failure(error: Error)
-    }
-    
-    typealias CacheOperationCompletion = (CacheOperationResult) -> Void
-    
     func save<T: Encodable>(data: T,
                             with identifier: CacheIdentifier,
-                            completion: CacheOperationCompletion?) {
+                            completion: ((Error?) -> Void)?) {
         let path = filePath(with: identifier)
+        print("CACHE - Writing to \(path)...")
         DispatchQueue.global(qos: .userInitiated).async {
             do {
                 try Disk.save(data, to: .caches, as: path)
                 DispatchQueue.main.async {
-                    completion?(.success)
+                    print("CACHE - Write to \(path) successful")
+                    completion?(nil)
                 }
             } catch {
                 DispatchQueue.main.async {
-                    completion?(.failure(error: error))
+                    print("CACHE - Write Failed: (\(error.localizedDescription))")
+                    completion?(error)
                 }
+            }
+        }
+    }
+    
+    func read<T: Decodable>(dataWith identifier: CacheIdentifier,
+                            as type: T.Type,
+                            completion: ((T?, Error?) -> Void)?) {
+        let path = filePath(with: identifier)
+        print("CACHE - Reading from \(path)...")
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                let result = try Disk.retrieve(path, from: .caches, as: type)
+                DispatchQueue.main.async {
+                    print("CACHE - Read from \(path) successful")
+                    completion?(result, nil)
+                }
+            } catch {
+                print("CACHE - Read Failed: (\(error.localizedDescription))")
+                completion?(nil, error)
             }
         }
     }

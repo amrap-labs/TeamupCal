@@ -36,9 +36,27 @@ extension LiveSessionsCalendarController: SessionsCalendarDataSource {
                   requestSessionsFor date: Date,
                   completion: @escaping SessionsCalendar.DataRequestCompletion) {
         
-        // TODO - Use cache
-        loader?.loadSessions(for: date, completion: { (result) in
-            completion(result)
-        })
+        let identifier = SessionsCalendar.Day.cacheIdentifier(for: date)
+        cache.item(for: identifier) { (day) in
+            
+            if let day = day {
+                completion(.success(day: day))
+                
+            } else {
+                
+                self.loader?.loadSessions(for: date, completion: { (result) in
+                    
+                    switch result {
+                    case .success(let sessions):
+                        let day = SessionsCalendar.Day(for: date, sessions: sessions)
+                        self.cache.persist(day, completion: nil)
+                        completion(.success(day: day))
+                        
+                    case .failure(let reason):
+                        completion(.failure(reason: reason))
+                    }
+                })
+            }
+        }
     }
 }
