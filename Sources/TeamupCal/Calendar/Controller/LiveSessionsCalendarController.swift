@@ -12,7 +12,7 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
     
     // MARK: Properties
     
-    private(set) var calendar: SessionsCalendar
+    private(set) var calendar: SessionsCalendar!
     private(set) weak var loader: SessionsLoader?
     
     private let cache: CacheStore<SessionsCalendar.Day>
@@ -20,13 +20,12 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
     // MARK: Init
     
     required init(loader: SessionsLoader, cacheRoot: CacheContainer) {
-        self.calendar = SessionsCalendar()
         self.loader = loader
         
         let cacheContainer = CacheContainer(path: "Calendar", inside: cacheRoot)
         self.cache = CacheStore<SessionsCalendar.Day>(for: cacheContainer)
         
-        calendar.dataSource = self
+        self.calendar = SessionsCalendar(with: self)
     }
 }
 

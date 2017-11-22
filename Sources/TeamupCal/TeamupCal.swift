@@ -28,16 +28,10 @@ public class TeamupCal {
     // MARK: Init
     
     public init?(with teamup: Teamup) {
-        guard let currentUser = teamup.auth.currentUser else {
-            print("TeamupCal could not initialize due to a fault in TeamupKit ☹️.")
-            print("Please raise an issue at https://github.com/amrap-labs/TeamupKit.")
-            return nil
-        }
-        
         self.teamup = teamup
         self.authObserver = TeamupAuthObserver()
         
-        self.cacheRoot = CacheContainer(path: "TeamupCal/\(currentUser.identifier)")
+        self.cacheRoot = CacheContainer(path: "TeamupCal")
         
         self.sessionsLoader = LiveSessionsLoader(sessions: teamup.sessions,
                                                  auth: teamup.auth)
@@ -51,10 +45,10 @@ public class TeamupCal {
 extension TeamupCal: TeamupAuthObserverDelegate {
     
     func authObserver(_ observer: TeamupAuthObserver, didObserveAuthenticationWith user: User) {
-        // TODO - Update Cache Root accordingly
+        
     }
     
     func authObserver(didObserveSignOut observer: TeamupAuthObserver) {
-        
+        self.cacheRoot.clear(completion: nil)
     }
 }

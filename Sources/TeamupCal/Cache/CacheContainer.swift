@@ -88,6 +88,17 @@ extension CacheContainer {
         }
     }
     
+    func clear(completion: ((Error?) -> Void)?) {
+        DispatchQueue.global(qos: .userInitiated).async {
+            do {
+                try Disk.remove(self.fullPath, from: .caches)
+                completion?(nil)
+            } catch {
+                completion?(error)
+            }
+        }
+    }
+    
     // MARK: File path
     
     private func filePath(with identifier: String) -> String {

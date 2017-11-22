@@ -22,14 +22,15 @@ public class SessionsCalendar {
     
     // MARK: Properties
     
-    internal weak var dataSource: SessionsCalendarDataSource?
+    private weak var dataSource: SessionsCalendarDataSource?
     
     private var years = [Year]()
     
     // MARK: Init
     
-    init() {
-        
+    init(with dataSource: SessionsCalendarDataSource) {
+        self.dataSource = dataSource
+
     }
     
     // MARK: Data

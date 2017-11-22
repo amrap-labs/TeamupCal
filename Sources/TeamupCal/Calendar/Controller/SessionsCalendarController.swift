@@ -10,7 +10,7 @@ import Foundation
 
 internal protocol SessionsCalendarController: class {
     
-    var calendar: SessionsCalendar { get }
+    var calendar: SessionsCalendar! { get }
     var loader: SessionsLoader? { get }
     
     init(loader: SessionsLoader, cacheRoot: CacheContainer)
