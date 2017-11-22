@@ -20,6 +20,7 @@
 		4681A3F41FBB9B2800C0B3BD /* LiveSessionsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4681A3F31FBB9B2800C0B3BD /* LiveSessionsLoader.swift */; };
 		468834861FC46ADF006F100A /* CacheContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468834851FC46ADF006F100A /* CacheContainer.swift */; };
 		468834881FC47667006F100A /* Date+Formatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468834871FC47667006F100A /* Date+Formatting.swift */; };
+		46B08A201FC60CAD00C30584 /* TeamupAuthObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B08A1F1FC60CAD00C30584 /* TeamupAuthObserver.swift */; };
 		46BDE1F41FBCBB2000B09BDA /* SessionsCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1F31FBCBB2000B09BDA /* SessionsCalendar.swift */; };
 		46BDE1F61FBCBB3E00B09BDA /* SessionsCalendar+Month.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1F51FBCBB3E00B09BDA /* SessionsCalendar+Month.swift */; };
 		46BDE1F81FBCBBA100B09BDA /* SessionsCalendar+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46BDE1F71FBCBBA100B09BDA /* SessionsCalendar+Week.swift */; };
@@ -62,6 +63,7 @@
 		4681A3F31FBB9B2800C0B3BD /* LiveSessionsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveSessionsLoader.swift; sourceTree = "<group>"; };
 		468834851FC46ADF006F100A /* CacheContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheContainer.swift; sourceTree = "<group>"; };
 		468834871FC47667006F100A /* Date+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatting.swift"; sourceTree = "<group>"; };
+		46B08A1F1FC60CAD00C30584 /* TeamupAuthObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamupAuthObserver.swift; sourceTree = "<group>"; };
 		46BDE1F31FBCBB2000B09BDA /* SessionsCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsCalendar.swift; sourceTree = "<group>"; };
 		46BDE1F51FBCBB3E00B09BDA /* SessionsCalendar+Month.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionsCalendar+Month.swift"; sourceTree = "<group>"; };
 		46BDE1F71FBCBBA100B09BDA /* SessionsCalendar+Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SessionsCalendar+Week.swift"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		46BDE2041FBCC1B900B09BDA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				46B08A1F1FC60CAD00C30584 /* TeamupAuthObserver.swift */,
 				46BDE2071FBCC8E900B09BDA /* TeamupCal+Errors.swift */,
 				46BDE2051FBCC1CB00B09BDA /* Date+CalendarUtils.swift */,
 				468834871FC47667006F100A /* Date+Formatting.swift */,
@@ -449,6 +452,7 @@
 				46BDE2011FBCBCCD00B09BDA /* LiveSessionsCalendarController.swift in Sources */,
 				46BDE2031FBCBE3700B09BDA /* SessionsCalendarDataSource.swift in Sources */,
 				4631FCA91FC3375D00DADCDE /* Results.swift in Sources */,
+				46B08A201FC60CAD00C30584 /* TeamupAuthObserver.swift in Sources */,
 				46BDE2061FBCC1CB00B09BDA /* Date+CalendarUtils.swift in Sources */,
 				4631FCA31FC32B6200DADCDE /* Cacheable.swift in Sources */,
 				46BDE1F61FBCBB3E00B09BDA /* SessionsCalendar+Month.swift in Sources */,

@@ -25,12 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.teamup = Teamup(apiToken: dictionary["apiToken"] as! String,
                              businessId: dictionary["businessId"] as! Int)
+        self.teamupCal = TeamupCal(with: self.teamup)
         
         teamup.auth.logIn(email: dictionary["email"] as! String,
                           password: dictionary["password"] as! String,
                           success: { (user) in
                             
-                            self.teamupCal = TeamupCal(with: self.teamup)
+                            
         }, failure: nil)
         
         return true

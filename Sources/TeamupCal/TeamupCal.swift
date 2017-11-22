@@ -14,6 +14,7 @@ public class TeamupCal {
     // MARK: Properties
     
     private let teamup: Teamup
+    private let authObserver: TeamupAuthObserver
     
     private let sessionsLoader: SessionsLoader
     private let calendarController: SessionsCalendarController
@@ -34,12 +35,26 @@ public class TeamupCal {
         }
         
         self.teamup = teamup
-        // TODO - This needs to monitor auth status
+        self.authObserver = TeamupAuthObserver()
+        
         self.cacheRoot = CacheContainer(path: "TeamupCal/\(currentUser.identifier)")
         
         self.sessionsLoader = LiveSessionsLoader(sessions: teamup.sessions,
                                                  auth: teamup.auth)
         self.calendarController = LiveSessionsCalendarController(loader: sessionsLoader,
                                                                  cacheRoot: cacheRoot)
+        
+        authObserver.delegate = self
+    }
+}
+
+extension TeamupCal: TeamupAuthObserverDelegate {
+    
+    func authObserver(_ observer: TeamupAuthObserver, didObserveAuthenticationWith user: User) {
+        // TODO - Update Cache Root accordingly
+    }
+    
+    func authObserver(didObserveSignOut observer: TeamupAuthObserver) {
+        
     }
 }
