@@ -40,7 +40,7 @@ extension SessionsCalendar.Day {
         return .infinite
     }
     var cacheIdentifier: CacheIdentifier {
-        return date.tu_cacheStringFormat
+        return date.teamUpCacheStringFormat
     }
     
     public var hashValue: Int {

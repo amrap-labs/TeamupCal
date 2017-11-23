@@ -8,9 +8,24 @@
 
 import Foundation
 
+
 public extension SessionsCalendar {
     
+    internal typealias WeekNumber = Int
+
     public class Week {
         
+        // MARK: Properties
+        
+        let number: WeekNumber
+        let rawDays = [WeakContainer<Day>]()
+        
+        // MARK: Init
+        
+        init(weekNumber: WeekNumber) {
+            self.number = weekNumber
+        }
+        
+        // MARK: Data
     }
 }

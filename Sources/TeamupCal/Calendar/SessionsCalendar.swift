@@ -23,14 +23,12 @@ public class SessionsCalendar {
     // MARK: Properties
     
     private weak var dataSource: SessionsCalendarDataSource?
-    
-    private var years = [Year]()
+    private let dataStore = SessionsCalendarDataStore()
     
     // MARK: Init
     
     init(with dataSource: SessionsCalendarDataSource) {
         self.dataSource = dataSource
-
     }
     
     // MARK: Data
@@ -40,6 +38,7 @@ public class SessionsCalendar {
         dataSource?.calendar(self, requestDayFor: date, completion: { (result) in
             switch result {
             case .success(let day):
+                self.dataStore.add(day: day)
                 completion(day)
                 
             case .failure:

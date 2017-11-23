@@ -14,14 +14,18 @@ extension Date {
         return Calendar.current
     }
     
-    var tu_startOfDay: Date? {
+    var startOfDay: Date? {
         return calendar.startOfDay(for: self)
     }
     
-    var tu_endOfDay: Date? {
+    var endOfDay: Date? {
         var components = DateComponents()
         components.day = 1
         components.second = -1
         return calendar.date(byAdding: components, to: self)
+    }
+    
+    var weekNumber: Int {
+        return calendar.component(.weekOfYear, from: self)
     }
 }

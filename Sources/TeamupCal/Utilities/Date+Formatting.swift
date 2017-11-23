@@ -16,7 +16,7 @@ extension Date {
         return dateFormatter
     }()
     
-    var tu_cacheStringFormat: String {
+    var teamUpCacheStringFormat: String {
         return Date.cacheFormatter.string(from: self)
     }
 }
