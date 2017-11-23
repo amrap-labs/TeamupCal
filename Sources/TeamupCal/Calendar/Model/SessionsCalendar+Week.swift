@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public extension SessionsCalendar {
     
     internal typealias WeekNumber = Int
@@ -21,7 +20,9 @@ public extension SessionsCalendar {
         
         private var rawDays = [Date: WeakContainer<Day>]()
         public var days: [Day] {
-            return rawDays.flatMap({ $0.value.value })
+            return rawDays.flatMap({ $0.value.value }).sorted(by: { (day, other) -> Bool in
+                return day.date > other.date
+            })
         }
         
         // MARK: Init

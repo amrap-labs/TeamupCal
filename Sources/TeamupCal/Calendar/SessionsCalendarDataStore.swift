@@ -89,6 +89,6 @@ extension SessionsCalendarDataStore: SessionsCalendarDataProvider {
     }
     
     func year(for date: Date) -> SessionsCalendar.Year? {
-        fatalError()
+        return years[date.year]
     }
 }

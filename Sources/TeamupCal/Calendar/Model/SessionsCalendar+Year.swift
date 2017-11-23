@@ -18,7 +18,9 @@ public extension SessionsCalendar {
         
         private var rawMonths = [Int: WeakContainer<Month>]()
         public var months: [Month] {
-            return rawMonths.flatMap({ $0.value.value })
+            return rawMonths.flatMap({ $0.value.value }).sorted(by: { (month, other) -> Bool in
+                return month.number > other.number
+            })
         }
         
         // MARK: Init

@@ -18,7 +18,9 @@ public extension SessionsCalendar {
         
         private var rawWeeks = [WeekNumber: WeakContainer<Week>]()
         public var weeks: [Week] {
-            return rawWeeks.flatMap({ $0.value.value })
+            return rawWeeks.flatMap({ $0.value.value }).sorted(by: { (week, other) -> Bool in
+                return week.number > other.number
+            })
         }
         
         // MARK: Init
