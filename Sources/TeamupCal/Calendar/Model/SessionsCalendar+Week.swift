@@ -18,7 +18,11 @@ public extension SessionsCalendar {
         // MARK: Properties
         
         let number: WeekNumber
-        let rawDays = [WeakContainer<Day>]()
+        
+        private var rawDays = [Date: WeakContainer<Day>]()
+        public var days: [Day] {
+            return rawDays.flatMap({ $0.value.value })
+        }
         
         // MARK: Init
         
@@ -27,5 +31,9 @@ public extension SessionsCalendar {
         }
         
         // MARK: Data
+        
+        func updateDay(_ day: Day) {
+            rawDays[day.date] = WeakContainer(value: day)
+        }
     }
 }

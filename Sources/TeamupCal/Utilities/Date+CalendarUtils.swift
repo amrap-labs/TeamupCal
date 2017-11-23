@@ -28,4 +28,11 @@ extension Date {
     var weekNumber: Int {
         return calendar.component(.weekOfYear, from: self)
     }
+    
+    var month: Int {
+        return calendar.component(.month, from: self)
+    }
+    var year: Int {
+        return calendar.component(.year, from: self)
+    }
 }

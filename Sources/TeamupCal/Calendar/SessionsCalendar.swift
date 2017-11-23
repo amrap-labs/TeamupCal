@@ -29,6 +29,10 @@ public class SessionsCalendar {
     
     init(with dataSource: SessionsCalendarDataSource) {
         self.dataSource = dataSource
+        
+        load(dayFor: Date()) { (day) in
+            
+        }
     }
     
     // MARK: Data

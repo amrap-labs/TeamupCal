@@ -12,5 +12,25 @@ public extension SessionsCalendar {
     
     public class Month {
         
+        // MARK: Properties
+        
+        let number: Int
+        
+        private var rawWeeks = [WeekNumber: WeakContainer<Week>]()
+        public var weeks: [Week] {
+            return rawWeeks.flatMap({ $0.value.value })
+        }
+        
+        // MARK: Init
+        
+        internal init(number: Int) {
+            self.number = number
+        }
+        
+        // MARK: Data
+        
+        internal func update(week: Week) {
+            rawWeeks[week.number] = WeakContainer(value: week)
+        }
     }
 }

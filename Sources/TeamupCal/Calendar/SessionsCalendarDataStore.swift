@@ -16,11 +16,14 @@ internal class SessionsCalendarDataStore {
     private typealias Day = SessionsCalendar.Day
     private typealias Week = SessionsCalendar.Week
     private typealias Month = SessionsCalendar.Month
+    private typealias Year = SessionsCalendar.Year
     
     // MARK: Properties
     
     private var days = [Date: Day]()
     private var weeks = [WeekNumber: Week]()
+    private var months = [Int: Month]()
+    private var years = [Int: Year]()
     
     // MARK: Data
     
@@ -29,6 +32,13 @@ internal class SessionsCalendarDataStore {
         
         let weekNumber = day.date.weekNumber
         let week = self.week(for: weekNumber)
+        week.updateDay(day)
+        
+        let month = self.month(for: day.date.month)
+        month.update(week: week)
+        
+        let year = self.year(for: day.date.year)
+        year.update(month: month)
     }
     
     // MARK: Utility
@@ -42,6 +52,26 @@ internal class SessionsCalendarDataStore {
         self.weeks[weekNumber] = week
         return week
     }
+    
+    private func month(for monthNumber: Int) -> Month {
+        if let month = self.months[monthNumber] {
+            return month
+        }
+        
+        let month = Month(number: monthNumber)
+        self.months[monthNumber] = month
+        return month
+    }
+    
+    private func year(for yearNumber: Int) -> Year {
+        if let year = self.years[yearNumber] {
+            return year
+        }
+        
+        let year = Year(number: yearNumber)
+        self.years[yearNumber] = year
+        return year
+    }
 }
 
 extension SessionsCalendarDataStore: SessionsCalendarDataProvider {
@@ -51,11 +81,11 @@ extension SessionsCalendarDataStore: SessionsCalendarDataProvider {
     }
     
     func week(for date: Date) -> SessionsCalendar.Week? {
-        fatalError()
+        return weeks[date.weekNumber]
     }
     
     func month(for date: Date) -> SessionsCalendar.Month? {
-        fatalError()
+        return months[date.month]
     }
     
     func year(for date: Date) -> SessionsCalendar.Year? {

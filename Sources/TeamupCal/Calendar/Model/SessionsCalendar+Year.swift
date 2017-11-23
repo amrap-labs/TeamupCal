@@ -12,5 +12,25 @@ public extension SessionsCalendar {
     
     public class Year {
         
+        // MARK: Properties
+        
+        let number: Int
+        
+        private var rawMonths = [Int: WeakContainer<Month>]()
+        public var months: [Month] {
+            return rawMonths.flatMap({ $0.value.value })
+        }
+        
+        // MARK: Init
+        
+        internal init(number: Int) {
+            self.number = number
+        }
+        
+        // MARK: Data
+        
+        internal func update(month: Month) {
+            rawMonths[month.number] = WeakContainer(value: month)
+        }
     }
 }
