@@ -32,29 +32,44 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
 extension LiveSessionsCalendarController: SessionsCalendarDataSource {
     
     func calendar(_ calendar: SessionsCalendar,
-                  requestDayFor date: Date,
+                  requestDaysBetween startDate: Date,
+                  and endDate: Date,
                   completion: @escaping SessionsCalendar.DataRequestCompletion) {
+        let allDates = startDate...endDate
+        let expectedDateCount = allDates.count
         
-        let identifier = SessionsCalendar.Day.cacheIdentifier(for: date)
-        cache.item(for: identifier) { (day) in
+        var days = [SessionsCalendar.Day]()
+        let attemptCompletion: (SessionsCalendar.Day) -> Void = { day in
+            days.append(day)
+            guard days.count == expectedDateCount else {
+                return
+            }
+            completion(.success(days: days))
+        }
+        
+        for date in allDates {
             
-            if let day = day { // loaded from cache 🚀
-                completion(.success(day: day))
+            let identifier = SessionsCalendar.Day.cacheIdentifier(for: date)
+            cache.item(for: identifier) { (day) in
                 
-            } else { // fallback to request 🤪
-                
-                self.loader?.loadSessions(for: date, completion: { (result) in
+                if let day = day { // loaded from cache 🚀
+                    attemptCompletion(day)
                     
-                    switch result {
-                    case .success(let sessions):
-                        let day = SessionsCalendar.Day(for: date, sessions: sessions)
-                        self.cache.persist(day, completion: nil)
-                        completion(.success(day: day))
+                } else { // fallback to request 🤪
+                    
+                    self.loader?.loadSessions(for: date, completion: { (result) in
                         
-                    case .failure(let reason):
-                        completion(.failure(reason: reason))
-                    }
-                })
+                        switch result {
+                        case .success(let sessions):
+                            let day = SessionsCalendar.Day(for: date, sessions: sessions)
+                            self.cache.persist(day, completion: nil)
+                            attemptCompletion(day)
+                            
+                        case .failure(let reason):
+                            completion(.failure(reason: reason))
+                        }
+                    })
+                }
             }
         }
     }

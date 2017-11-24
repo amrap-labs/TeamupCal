@@ -51,7 +51,7 @@ internal class LiveSessionsLoader: SessionsLoader {
                                  completion: @escaping LoadCompletion) {
         self.sessions?.load(between: startDate,
                             and: endDate,
-                            includeRegistrationDetails: true,
+                            includeRegistrationDetails: false,
                             includeNonActive: true,
                             page: page,
                             success:

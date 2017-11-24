@@ -41,6 +41,12 @@ internal class SessionsCalendarDataStore {
         year.update(month: month)
     }
     
+    func add(days: [SessionsCalendar.Day]) {
+        for day in days {
+            add(day: day)
+        }
+    }
+    
     // MARK: Utility
     
     private func week(for weekNumber: WeekNumber) -> Week {

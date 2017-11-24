@@ -14,7 +14,7 @@ public class SessionsCalendar {
     // MARK: Types
     
     enum CalendarLoadResult {
-        case success(day: Day)
+        case success(days: [Day])
         case failure(reason: TeamupCal.FailureReason)
     }
     
@@ -30,24 +30,22 @@ public class SessionsCalendar {
     init(with dataSource: SessionsCalendarDataSource) {
         self.dataSource = dataSource
         
-        load(dayFor: Date()) { (day) in
-            
-        }
     }
     
     // MARK: Data
     
-    private func load(dayFor date: Date,
-                      completion: @escaping ((Day) -> Void)) {
-        dataSource?.calendar(self, requestDayFor: date, completion: { (result) in
+    private func load(daysBetween startDate: Date,
+                      and endDate: Date,
+                      completion: @escaping (([Day]) -> Void)) {
+        dataSource?.calendar(self, requestDaysBetween: startDate, and: endDate, completion: { (result) in
             switch result {
-            case .success(let day):
-                self.dataStore.add(day: day)
-                completion(day)
+            case .success(let days):
+                self.dataStore.add(days: days)
+                completion(days)
                 
             case .failure:
                 // TODO - Post to delegate or something
-                print("CALENDAR - Failed to load day for \(date)")
+                print("CALENDAR - Failed to load days for \(startDate) / - \(endDate)")
             }
         })
     }

@@ -35,4 +35,24 @@ extension Date {
     var year: Int {
         return calendar.component(.year, from: self)
     }
+    
+    static func ...(lhs: Date, rhs: Date) -> [Date] {
+        var dates: [Date] = []
+        let cal = Calendar.current
+        var days = DateComponents()
+        var dayCount = 0
+        while true {
+            days.day = dayCount
+            if let date: Date = cal.date(byAdding: days, to: lhs) {
+                if date.compare(rhs) == .orderedDescending {
+                    break
+                }
+                dayCount += 1
+                dates.append(date)
+            } else {
+                break
+            }
+        }
+        return dates
+    }
 }
