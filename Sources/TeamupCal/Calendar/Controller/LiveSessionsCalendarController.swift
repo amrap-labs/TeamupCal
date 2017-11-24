@@ -32,30 +32,31 @@ internal class LiveSessionsCalendarController: SessionsCalendarController {
 extension LiveSessionsCalendarController: SessionsCalendarDataSource {
     
     func calendar(_ calendar: SessionsCalendar,
-                  requestDayFor date: Date,
+                  requestDaysBetween startDate: Date,
+                  and endDate: Date,
                   completion: @escaping SessionsCalendar.DataRequestCompletion) {
         
-        let identifier = SessionsCalendar.Day.cacheIdentifier(for: date)
-        cache.item(for: identifier) { (day) in
-            
-            if let day = day { // loaded from cache 🚀
-                completion(.success(day: day))
-                
-            } else { // fallback to request 🤪
-                
-                self.loader?.loadSessions(for: date, completion: { (result) in
-                    
-                    switch result {
-                    case .success(let sessions):
-                        let day = SessionsCalendar.Day(for: date, sessions: sessions)
-                        self.cache.persist(day, completion: nil)
-                        completion(.success(day: day))
-                        
-                    case .failure(let reason):
-                        completion(.failure(reason: reason))
-                    }
-                })
-            }
-        }
+//        let identifier = SessionsCalendar.Day.cacheIdentifier(for: date)
+//        cache.item(for: identifier) { (day) in
+//            
+//            if let day = day { // loaded from cache 🚀
+//                completion(.success(day: day))
+//                
+//            } else { // fallback to request 🤪
+//                
+//                self.loader?.loadSessions(for: date, completion: { (result) in
+//                    
+//                    switch result {
+//                    case .success(let sessions):
+//                        let day = SessionsCalendar.Day(for: date, sessions: sessions)
+//                        self.cache.persist(day, completion: nil)
+//                        completion(.success(day: day))
+//                        
+//                    case .failure(let reason):
+//                        completion(.failure(reason: reason))
+//                    }
+//                })
+//            }
+//        }
     }
 }

@@ -39,7 +39,7 @@ public class SessionsCalendar {
     
     private func load(dayFor date: Date,
                       completion: @escaping ((Day) -> Void)) {
-        dataSource?.calendar(self, requestDayFor: date, completion: { (result) in
+        dataSource?.calendar(self, requestDaysBetween: date, and: date, completion: { (result) in
             switch result {
             case .success(let day):
                 self.dataStore.add(day: day)
