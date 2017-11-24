@@ -27,11 +27,10 @@ internal class LiveSessionsLoader: SessionsLoader {
     
     // MARK: Loading
     
-    func loadSessions(from startDate: Date,
-                      to endDate: Date,
-                      completion: @escaping SessionsLoader.LoadCompletion) {
+    func loadSessions(for date: Date,
+                      completion: @escaping LoadCompletion) {
         
-        guard let startDate = startDate.startOfDay, let endDate = endDate.endOfDay else {
+        guard let startDate = date.startOfDay, let endDate = date.endOfDay else {
             completion(.failure(reason: .unknown))
             return
         }

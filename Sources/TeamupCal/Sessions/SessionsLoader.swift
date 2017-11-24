@@ -15,7 +15,6 @@ internal protocol SessionsLoader: class {
     
     init(sessions: SessionsController, auth: AuthenticationController)
     
-    func loadSessions(from startDate: Date,
-                      to endDate: Date,
+    func loadSessions(for date: Date,
                       completion: @escaping LoadCompletion)
 }
