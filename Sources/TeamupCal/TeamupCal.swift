@@ -27,7 +27,7 @@ public class TeamupCal {
     
     // MARK: Init
     
-    public init?(with teamup: Teamup) {
+    public init(with teamup: Teamup) {
         self.teamup = teamup
         self.authObserver = TeamupAuthObserver()
         
